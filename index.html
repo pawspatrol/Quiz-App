@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Quiz Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen" class="quiz-card">
+    <div style="font-size: 50px;">📖</div>
+    <h1 style="font-family: 'Playfair Display';">Bible Quiz Platform</h1>
+    <p>100 Questions | 30 Minutes</p>
+    <button style="background: #1e293b; color: white;" onclick="startQuiz()">Begin Examination</button>
+  </div>
+
+  <div id="quiz-screen" class="quiz-card hidden">
+    <div id="timer">30:00</div>
+    <div id="progress" style="color: #d4af37; font-weight: bold; font-size: 14px;">QUESTION 1 OF 100</div>
+    <div class="question-text" id="question-body"></div>
+    <div id="options-container"></div>
+    
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <button class="btn-nav" onclick="changeQuestion(-1)">Previous</button>
+        <button class="btn-nav" style="background: #1e293b; color: white;" onclick="changeQuestion(1)">Next</button>
+    </div>
+
+    <div class="nav-grid" id="question-nav"></div>
+    <button style="margin-top: 20px; background: #334155; color: white;" onclick="showResults()">Submit Final Score</button>
+  </div>
+
+  <div id="result-screen" class="quiz-card hidden">
+    <h1>Result</h1>
+    <div id="final-score" style="font-size: 32px; font-weight: bold; color: #d4af37;">0/100</div>
+    <p id="feedback-text"></p>
+    <button style="background: #1e293b; color: white;" onclick="location.reload()">Try Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
