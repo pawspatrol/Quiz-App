@@ -1,0 +1,186 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* =========================
+   CENTERED LAYOUT
+========================= */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 500px;
+}
+
+.landing-box h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.landing-box p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+button.secondary {
+    background: #e5e7eb;
+    color: #111;
+}
+
+button.secondary:hover {
+    background: #d1d5db;
+}
+
+/* =========================
+   QUIZ CONTAINER
+========================= */
+.quiz-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    margin-top: 20px;
+}
+
+/* QUESTION TEXT */
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+
+.option:hover {
+    background: #e2e8f0;
+}
+
+.option.selected {
+    border-color: #2563eb;
+    background: #dbeafe;
+}
+
+/* =========================
+   NAVIGATION BUTTONS
+========================= */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* =========================
+   SCORE PANEL
+========================= */
+.result-box {
+    text-align: center;
+    padding: 30px;
+}
+
+.result-box h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress {
+    width: 100%;
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .landing-box {
+        padding: 25px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
