@@ -1,0 +1,236 @@
+/* ================= ROOT THEME ================= */
+:root {
+  --primary: #7c3aed;
+  --secondary: #a78bfa;
+  --success: #22c55e;
+  --error: #ef4444;
+
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  padding: 10px;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================= TEXT ================= */
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ================= INPUT ================= */
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #020617;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+}
+
+/* ================= BUTTONS ================= */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+/* ================= QUIZ HEADER ================= */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-pill {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+#timer {
+  font-weight: bold;
+  color: var(--error);
+}
+
+/* ================= NAVIGATOR ================= */
+.navigator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.navigator button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 12px;
+  background: #020617;
+  border: 1px solid var(--border);
+}
+
+.navigator button.active {
+  background: var(--primary);
+}
+
+.navigator button.answered {
+  background: var(--success);
+}
+
+/* ================= QUESTION ================= */
+#question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ================= OPTIONS ================= */
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  background: #020617;
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  border-color: var(--primary);
+}
+
+.option-btn.selected {
+  background: var(--secondary);
+}
+
+.correct {
+  background: var(--success) !important;
+}
+
+.wrong {
+  background: var(--error) !important;
+}
+
+/* ================= CONTROLS ================= */
+.quiz-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.quiz-controls button {
+  flex: 1;
+}
+
+/* ================= RESULT ================= */
+.score-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#final-score {
+  font-size: 42px;
+  color: var(--primary);
+}
+
+#percentage {
+  color: var(--muted);
+}
+
+.divider {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* ================= REVIEW ================= */
+.review-section {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.review-item {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.review-item.correct {
+  color: var(--success);
+}
+
+.review-item.wrong {
+  color: var(--error);
+}
