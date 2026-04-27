@@ -1,0 +1,77 @@
+:root {
+    --bg: #0f172a;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --accent: #4f46e5;
+    --timer-bg: #fee2e2;
+    --timer-text: #ef4444;
+}
+
+body {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: var(--text-main);
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+#timer {
+    background: var(--timer-bg);
+    color: var(--timer-text);
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.navigator {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin: 15px 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.nav-dot {
+    height: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.nav-dot.answered { background: var(--accent); color: white; }
+
+.option-btn {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 2px solid #f1f5f9;
+    background: white;
+    text-align: left;
+    font-weight: 600;
+}
+
+.option-btn.selected { border-color: var(--accent); background: #f5f3ff; }
+
+button#start-btn, .submit, .retry-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: 700;
+    margin-top: 10px;
+}
